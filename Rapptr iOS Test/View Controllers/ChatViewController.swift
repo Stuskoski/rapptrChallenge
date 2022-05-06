@@ -23,34 +23,42 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Properties
     private var client: ChatClient?
-    private var messages: [Message]?
+    private var messages: [Message]? = Message.testData()
+    
+    var appFlowControllerDelegate: AppFlowControllerDelegate?
     
     // MARK: - Outlets
     @IBOutlet weak var chatTable: UITableView!
     
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        messages = [Message]()
-        configureTable(tableView: chatTable)
         title = "Chat"
         
-        // TODO: Remove test data when we have actual data from the server loaded
-        messages?.append(Message(testName: "James", withTestMessage: "Hey Guys!"))
-        messages?.append(Message(testName:"Paul", withTestMessage:"What's up?"))
-        messages?.append(Message(testName:"Amy", withTestMessage:"Hey! :)"))
-        messages?.append(Message(testName:"James", withTestMessage:"Want to grab some food later?"))
-        messages?.append(Message(testName:"Paul", withTestMessage:"Sure, time and place?"))
-        messages?.append(Message(testName:"Amy", withTestMessage:"YAS! I am starving!!!"))
-        messages?.append(Message(testName:"James", withTestMessage:"1 hr at the Local Burger sound good?"))
-        messages?.append(Message(testName:"Paul", withTestMessage:"Sure thing"))
-        messages?.append(Message(testName:"Amy", withTestMessage:"See you there :P"))
-        
-        chatTable.reloadData()
+        configureNavBar()
+        configureTable(tableView: chatTable)
     }
     
-    // MARK: - Private
+    // MARK: - IBAction
+    @IBAction func backAction(_ sender: Any) {
+        let mainMenuViewController = MenuViewController()
+        self.navigationController?.pushViewController(mainMenuViewController, animated: true)
+    }
+    
+    func configureNavBar() {
+        let backBtn = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(dismissView))
+        self.navigationItem.leftBarButtonItem = backBtn
+    }
+    
+    @objc func dismissView() {
+        appFlowControllerDelegate?.popCurrentVC()
+    }
+}
+
+// MARK: - Table view
+extension ChatViewController {
+    
     private func configureTable(tableView: UITableView) {
         tableView.delegate = self
         tableView.dataSource = self
@@ -58,7 +66,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.tableFooterView = UIView(frame: .zero)
     }
     
-    // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: ChatTableViewCell? = nil
         if cell == nil {
@@ -73,14 +80,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return messages!.count
     }
     
-    // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 58.0
+        return UITableView.automaticDimension
     }
     
-    // MARK: - IBAction
-    @IBAction func backAction(_ sender: Any) {
-        let mainMenuViewController = MenuViewController()
-        self.navigationController?.pushViewController(mainMenuViewController, animated: true)
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 145.0
     }
 }

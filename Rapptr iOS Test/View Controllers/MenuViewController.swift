@@ -33,6 +33,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var animationButton: UIButton!
     
+    var appFlowControllerDelegate: AppFlowControllerDelegate?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,17 +43,14 @@ class MenuViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func didPressChatButton(_ sender: Any) {
-        let chatViewController = ChatViewController()
-        navigationController?.pushViewController(chatViewController, animated: true)
+        appFlowControllerDelegate?.navigateToChat()
     }
     
     @IBAction func didPressLoginButton(_ sender: Any) {
-        let loginViewController = LoginViewController()
-        navigationController?.pushViewController(loginViewController, animated: true)
+        appFlowControllerDelegate?.navigateToLogin()
     }
     
     @IBAction func didPressAnimationButton(_ sender: Any) {
-        let animationViewController = AnimationViewController()
-        navigationController?.pushViewController(animationViewController, animated: true)
+        appFlowControllerDelegate?.navigateToAnimation()
     }
 }

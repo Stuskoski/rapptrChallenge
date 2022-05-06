@@ -20,3 +20,22 @@ struct Message {
         self.text = message
     }
 }
+
+// MARK: - Test Data
+extension Message {
+    static func testData() -> [Message] {
+        var messages = [Message]()
+        
+        messages.append(Message(testName: "James", withTestMessage: "Hey Guys!"))
+        messages.append(Message(testName:"Paul", withTestMessage:"What's up?"))
+        messages.append(Message(testName:"Amy", withTestMessage:"Hey! :)"))
+        messages.append(Message(testName:"James", withTestMessage:"Want to grab some food later?"))
+        messages.append(Message(testName:"Paul", withTestMessage:"Sure, time and place?"))
+        messages.append(Message(testName:"Amy", withTestMessage:"YAS! I am starving!!!"))
+        messages.append(Message(testName:"James", withTestMessage:"1 hr at the Local Burger sound good?"))
+        messages.append(Message(testName:"Paul", withTestMessage:"Sure thing"))
+        messages.append(Message(testName:"Amy", withTestMessage:"See you there :P"))
+        
+        return messages
+    }
+}
