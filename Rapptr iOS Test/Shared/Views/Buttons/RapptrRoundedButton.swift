@@ -11,28 +11,29 @@ import UIKit
 struct RapptrRoundedButton: View {
     
     var text: String
-    var image: UIImage
+    var imageName: String
     var tapHandler: (() -> Void)?
     
     var body: some View {
         
         HStack(spacing: 16) {
-            Image(uiImage: image)
+            Image(imageName)
                 .resizable()
+                .scaledToFill()
                 .frame(width: 24, height: 24)
                 .padding(.leading, 22)
-                .padding(.trailing, 16)
             Text(text)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(Color(uiColor: .RapptrColors.textColor))
         }
-        .onTapGesture {
-            tapHandler?()
-        }
-        .frame(maxWidth: .infinity, maxHeight: 55, alignment: .leading)
+        .frame(maxHeight: 55)
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.red.opacity(0.8))
+                .fill(Color.white.opacity(0.8))
+        }
+        .onTapGesture {
+            tapHandler?()
         }
     }
 }
@@ -41,13 +42,13 @@ struct RapptrRoundedButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             RapptrRoundedButton(text: "CHAT",
-                                image: UIImage(named: "ic_chat")!,
+                                imageName: "ic_chat",
                                 tapHandler: nil)
             RapptrRoundedButton(text: "LOGIN",
-                                image: UIImage(named: "ic_login")!,
+                                imageName: "ic_login",
                                 tapHandler: nil)
             RapptrRoundedButton(text: "ANIMATION",
-                                image: UIImage(named: "ic_animation")!,
+                                imageName: "ic_animation",
                                 tapHandler: nil)
         }
         

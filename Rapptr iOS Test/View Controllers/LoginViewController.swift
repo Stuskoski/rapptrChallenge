@@ -43,8 +43,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func backAction(_ sender: Any) {
-        let mainMenuViewController = MenuViewController()
-        self.navigationController?.pushViewController(mainMenuViewController, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func didPressLoginButton(_ sender: Any) {

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 protocol AppFlowControllerDelegate {
     func popCurrentVC()
@@ -24,10 +25,12 @@ class AppFlowController: UIViewController, AppFlowControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
-        menuViewController.appFlowControllerDelegate = self
+        let menuView = MenuView(viewModel: MenuView.ViewModel(chatTapHandler: navigateToChat,
+                                                              loginTapHandler: navigateToLogin,
+                                                              animationTapHandler: navigateToAnimation))
         
-        navController.show(menuViewController, sender: self)
+        let menuHost = UIHostingController(rootView: menuView)
+        navController.show(menuHost, sender: self)
         addChildVC(navController)
     }
 }
