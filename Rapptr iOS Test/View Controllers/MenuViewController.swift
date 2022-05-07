@@ -5,6 +5,7 @@
 //  Copyright © 2020 Rapptr Labs. All rights reserved.
 
 import UIKit
+import SwiftUI
 
 class MenuViewController: UIViewController {
     
@@ -28,29 +29,82 @@ class MenuViewController: UIViewController {
      * =========================================================================================
      */
     
-    // MARK: - Outlets
-    @IBOutlet weak var chatButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var animationButton: UIButton!
-    
     var appFlowControllerDelegate: AppFlowControllerDelegate?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Coding Tasks"
+        addMenuButtons()
     }
     
-    // MARK: - Actions
-    @IBAction func didPressChatButton(_ sender: Any) {
+    private func addMenuButtons() {
+        
+        let chatButton = RapptrRoundedButton(text: "Chat", image: UIImage(named: "ic_chat")!, tapHandler: chatButtonTapped)
+        let loginButton = RapptrRoundedButton(text: "Login", image: UIImage(named: "ic_login")!, tapHandler: loginButtonTapped)
+        let animationButton = RapptrRoundedButton(text: "Animation", image: UIImage(named: "ic_animation")!, tapHandler: animationButtonTapped)
+        
+        let hStack = UIStackView(arrangedSubviews: [
+            UIHostingController(rootView: chatButton).view,
+            UIHostingController(rootView: loginButton).view,
+            UIHostingController(rootView: animationButton).view
+        ])
+        
+        view.addSubview(hStack)
+
+        hStack.axis = .vertical
+        hStack.center = view.center
+        hStack.spacing = 24
+        
+        hStack.translatesAutoresizingMaskIntoConstraints = false
+        
+        let horizontalCenterConstraint = NSLayoutConstraint(item: hStack,
+                                                            attribute: NSLayoutConstraint.Attribute.centerX,
+                                                            relatedBy: NSLayoutConstraint.Relation.equal,
+                                                            toItem: view,
+                                                            attribute: NSLayoutConstraint.Attribute.centerX,
+                                                            multiplier: 1,
+                                                            constant: 0)
+        
+        let verticalCenterConstraint = NSLayoutConstraint(item: hStack,
+                                                          attribute: NSLayoutConstraint.Attribute.centerY,
+                                                          relatedBy: NSLayoutConstraint.Relation.equal,
+                                                          toItem: view,
+                                                          attribute: NSLayoutConstraint.Attribute.centerY,
+                                                          multiplier: 1,
+                                                          constant: 0)
+        
+        let leadingConstraint = NSLayoutConstraint(item: hStack,
+                                                   attribute: NSLayoutConstraint.Attribute.leading,
+                                                   relatedBy: NSLayoutConstraint.Relation.equal,
+                                                   toItem: view,
+                                                   attribute: NSLayoutConstraint.Attribute.leading,
+                                                   multiplier: 1,
+                                                   constant: 32)
+        
+        let trailingConstraint = NSLayoutConstraint(item: hStack,
+                                                    attribute: NSLayoutConstraint.Attribute.trailing,
+                                                    relatedBy: NSLayoutConstraint.Relation.equal,
+                                                    toItem: view,
+                                                    attribute: NSLayoutConstraint.Attribute.trailing,
+                                                    multiplier: 1,
+                                                    constant: 32)
+        
+        view.addConstraints([horizontalCenterConstraint, verticalCenterConstraint, leadingConstraint, trailingConstraint])
+    }
+}
+
+// MARK: - Actions
+extension MenuViewController {
+    private func chatButtonTapped() {
         appFlowControllerDelegate?.navigateToChat()
     }
     
-    @IBAction func didPressLoginButton(_ sender: Any) {
+    private func loginButtonTapped() {
         appFlowControllerDelegate?.navigateToLogin()
     }
     
-    @IBAction func didPressAnimationButton(_ sender: Any) {
+    private func animationButtonTapped() {
         appFlowControllerDelegate?.navigateToAnimation()
     }
 }

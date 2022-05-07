@@ -12,6 +12,7 @@
 		8B3A515C2825CEA000952DF9 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A515B2825CEA000952DF9 /* AppFlowController.swift */; };
 		8B3A515E2825CEF900952DF9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A515D2825CEF900952DF9 /* UIViewController+Extension.swift */; };
 		8B3A51612825D1E500952DF9 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51602825D1E500952DF9 /* ThemeHelper.swift */; };
+		8B3A51672826157200952DF9 /* RapptrRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */; };
 		E9414DB726C45CF300512A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DB626C45CF300512A71 /* AppDelegate.swift */; };
 		E9414DC026C45CF400512A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9414DBF26C45CF400512A71 /* Assets.xcassets */; };
 		E9414DC326C45CF400512A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9414DC126C45CF400512A71 /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 		8B3A515B2825CEA000952DF9 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		8B3A515D2825CEF900952DF9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8B3A51602825D1E500952DF9 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
+		8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapptrRoundedButton.swift; sourceTree = "<group>"; };
 		E9414DB326C45CF300512A71 /* Rapptr iOS Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rapptr iOS Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9414DB626C45CF300512A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9414DBF26C45CF400512A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		8B3A51562825CB7F00952DF9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8B3A5162282614EC00952DF9 /* Views */,
 				8B3A515F2825D1D900952DF9 /* Helpers */,
 				8B3A515A2825CE9300952DF9 /* FlowControllers */,
 				8B3A51572825CB8400952DF9 /* Extensions */,
@@ -114,6 +117,22 @@
 				8B3A51602825D1E500952DF9 /* ThemeHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8B3A5162282614EC00952DF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A5163282614F300952DF9 /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B3A5163282614F300952DF9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		E9414DAA26C45CF300512A71 = {
@@ -336,6 +355,7 @@
 				8B3A51612825D1E500952DF9 /* ThemeHelper.swift in Sources */,
 				E9414DEA26C468D700512A71 /* SceneDelegate.swift in Sources */,
 				E9414DD626C4617B00512A71 /* ChatTableViewCell.swift in Sources */,
+				8B3A51672826157200952DF9 /* RapptrRoundedButton.swift in Sources */,
 				E9414DE226C4618900512A71 /* AnimationViewController.swift in Sources */,
 				E9414DB726C45CF300512A71 /* AppDelegate.swift in Sources */,
 				8B3A51592825CB8F00952DF9 /* Color+Extension.swift in Sources */,
@@ -481,7 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Rapptr iOS Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,7 +521,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Rapptr iOS Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

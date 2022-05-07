@@ -50,7 +50,7 @@ class ChatTableViewCell: UITableViewCell {
     func styleBodyBackground() {
         bubble.layer.cornerRadius = 8
         bubble.layer.borderWidth = 1
-        bubble.layer.borderColor = UIColor.RapptrColors.borderGrey?.cgColor
+        bubble.layer.borderColor = UIColor.RapptrColors.borderGrey.cgColor
     }
     
     /// Checks if there is a valid url in payload, if there is it will attempt
