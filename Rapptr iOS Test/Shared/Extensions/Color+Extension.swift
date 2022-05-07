@@ -13,5 +13,6 @@ extension UIColor {
         static let borderGrey = UIColor(named: "border-grey")!
         static let rapptrBlue = UIColor(named: "rapptr-blue")!
         static let textColor = UIColor(named: "text-color")!
+        static let textfieldPlaceholder = UIColor(named: "textfield-placeholder")!
     }
 }

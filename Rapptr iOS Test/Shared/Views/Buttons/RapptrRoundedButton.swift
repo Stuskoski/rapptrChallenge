@@ -38,6 +38,7 @@ struct RapptrRoundedButton: View {
     }
 }
 
+#if DEBUG
 struct RapptrRoundedButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -54,3 +55,4 @@ struct RapptrRoundedButton_Previews: PreviewProvider {
         
     }
 }
+#endif

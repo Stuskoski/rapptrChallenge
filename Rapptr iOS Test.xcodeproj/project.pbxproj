@@ -15,6 +15,7 @@
 		8B3A51672826157200952DF9 /* RapptrRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */; };
 		8B3A51692826283700952DF9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51682826283700952DF9 /* MenuView.swift */; };
 		8B3A516B28262F5A00952DF9 /* MenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A516A28262F5A00952DF9 /* MenuView+ViewModel.swift */; };
+		8B3A516E2826CEF000952DF9 /* RapptrTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A516D2826CEF000952DF9 /* RapptrTextField.swift */; };
 		E9414DB726C45CF300512A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DB626C45CF300512A71 /* AppDelegate.swift */; };
 		E9414DC026C45CF400512A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9414DBF26C45CF400512A71 /* Assets.xcassets */; };
 		E9414DC326C45CF400512A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9414DC126C45CF400512A71 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapptrRoundedButton.swift; sourceTree = "<group>"; };
 		8B3A51682826283700952DF9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		8B3A516A28262F5A00952DF9 /* MenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuView+ViewModel.swift"; sourceTree = "<group>"; };
+		8B3A516D2826CEF000952DF9 /* RapptrTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapptrTextField.swift; sourceTree = "<group>"; };
 		E9414DB326C45CF300512A71 /* Rapptr iOS Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rapptr iOS Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9414DB626C45CF300512A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9414DBF26C45CF400512A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		8B3A5162282614EC00952DF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8B3A516C2826CEE500952DF9 /* TextFields */,
 				8B3A5163282614F300952DF9 /* Buttons */,
 			);
 			path = Views;
@@ -133,6 +136,14 @@
 				8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		8B3A516C2826CEE500952DF9 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A516D2826CEF000952DF9 /* RapptrTextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 		E9414DAA26C45CF300512A71 = {
@@ -351,6 +362,7 @@
 				8B3A515C2825CEA000952DF9 /* AppFlowController.swift in Sources */,
 				E9414DCB26C45EC900512A71 /* Message.swift in Sources */,
 				8B3A51612825D1E500952DF9 /* ThemeHelper.swift in Sources */,
+				8B3A516E2826CEF000952DF9 /* RapptrTextField.swift in Sources */,
 				E9414DEA26C468D700512A71 /* SceneDelegate.swift in Sources */,
 				8B3A51692826283700952DF9 /* MenuView.swift in Sources */,
 				E9414DD626C4617B00512A71 /* ChatTableViewCell.swift in Sources */,

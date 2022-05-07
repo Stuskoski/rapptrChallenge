@@ -14,6 +14,7 @@ enum Theme {
 
 class ThemeHelper {
     
+    ///global theme, only light supported at this time
     func applyTheme(theme: Theme) {
         
         switch theme {
