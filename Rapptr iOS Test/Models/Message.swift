@@ -33,7 +33,7 @@ extension Message {
         messages.append(Message(testName:"Paul", withTestMessage:"Sure, time and place?"))
         messages.append(Message(testName:"Amy", withTestMessage:"YAS! I am starving!!!"))
         messages.append(Message(testName:"James", withTestMessage:"1 hr at the Local Burger sound good?"))
-        messages.append(Message(testName:"Paul", withTestMessage:"Sure thing"))
+        messages.append(Message(testName:"Paul", withTestMessage:"Sure thing.  But first I must type a long message so I can see multiple lines on the cell."))
         messages.append(Message(testName:"Amy", withTestMessage:"See you there :P"))
         
         return messages

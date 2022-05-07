@@ -29,7 +29,7 @@ class ChatTableViewCell: UITableViewCell {
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        styleBodyBackground()
+        styleView()
     }
     
     override func prepareForReuse() {
@@ -47,7 +47,9 @@ class ChatTableViewCell: UITableViewCell {
         }
     }
     
-    func styleBodyBackground() {
+    func styleView() {
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.height/2
+        
         bubble.layer.cornerRadius = 8
         bubble.layer.borderWidth = 1
         bubble.layer.borderColor = UIColor.RapptrColors.borderGrey.cgColor
