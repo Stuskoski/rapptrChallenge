@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8B3A518228285C3300952DF9 /* Errors */,
-				8B3A517C2828440400952DF9 /* Domain */,
+				8B3A517C2828440400952DF9 /* Models */,
 				8B3A517928282DEA00952DF9 /* Services */,
 				8B3A5162282614EC00952DF9 /* Views */,
 				8B3A515F2825D1D900952DF9 /* Helpers */,
@@ -187,12 +187,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		8B3A517C2828440400952DF9 /* Domain */ = {
+		8B3A517C2828440400952DF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B3A518528285CCB00952DF9 /* Chat */,
 				8B3A518128285C1100952DF9 /* Login */,
 			);
-			path = Domain;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8B3A518128285C1100952DF9 /* Login */ = {
@@ -209,6 +210,14 @@
 				8B3A518328285C4600952DF9 /* NetworkErrors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		8B3A518528285CCB00952DF9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E9414DCA26C45EC900512A71 /* Message.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		E9414DAA26C45CF300512A71 = {
@@ -236,21 +245,12 @@
 				E9414DB626C45CF300512A71 /* AppDelegate.swift */,
 				E9414DE926C468D700512A71 /* SceneDelegate.swift */,
 				E9414DD226C4617B00512A71 /* Views */,
-				E9414DCC26C45ECD00512A71 /* Models */,
 				E9414DD826C4618900512A71 /* View Controllers */,
 				E9414DBF26C45CF400512A71 /* Assets.xcassets */,
 				E9414DC126C45CF400512A71 /* LaunchScreen.storyboard */,
 				E9414DC426C45CF400512A71 /* Info.plist */,
 			);
 			path = "Rapptr iOS Test";
-			sourceTree = "<group>";
-		};
-		E9414DCC26C45ECD00512A71 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E9414DCA26C45EC900512A71 /* Message.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E9414DD226C4617B00512A71 /* Views */ = {

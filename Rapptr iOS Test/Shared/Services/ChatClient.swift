@@ -20,9 +20,27 @@ import Foundation
 
 class ChatClient {
     
+    static let shareInstance = ChatClient()
+    
+    private init() { }
+    
     var session: URLSession?
     
-    func fetchChatData(completion: @escaping ([Message]) -> Void, error errorHandler: @escaping (String?) -> Void) {
+    func fetchChatData() async throws -> MessageResponse {
         
+        //request details
+        let request = try URLRequest(url: URL(string: "http://dev.rapptrlabs.com/Tests/scripts/chat_log.php")!, method: .get)
+        
+        //request
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        //response handling
+        let chatResponse = try JSONDecoder().decode(MessageResponse.self, from: data)
+        
+        if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+            return chatResponse
+        } else {
+            throw NetworkError.chatError("Response code was not 200")
+        }
     }
 }

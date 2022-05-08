@@ -23,7 +23,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Properties
     private var client: ChatClient?
-    private var messages: [Message]? = Message.testData()
+    private var messages = [Message]()
         
     // MARK: - Outlets
     @IBOutlet weak var chatTable: UITableView!
@@ -34,6 +34,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         title = "Chat"
         
         configureTable(tableView: chatTable)
+        loadMessages()
     }
 }
 
@@ -53,12 +54,12 @@ extension ChatViewController {
             let nibs = Bundle.main.loadNibNamed("ChatTableViewCell", owner: self, options: nil)
             cell = nibs?[0] as? ChatTableViewCell
         }
-        cell?.setCellData(message: messages![indexPath.row])
+        cell?.setCellData(message: messages[indexPath.row])
         return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages!.count
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,5 +68,38 @@ extension ChatViewController {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 145.0
+    }
+}
+
+// MARK: - Service Calls
+extension ChatViewController {
+    
+    /// Loads messages and displays them in tableview,
+    /// will display failure alert if any error is thrown in service
+    private func loadMessages() {
+        Task.init(priority: .userInitiated) {
+            do {
+                let messageResponse = try await ChatClient.shareInstance.fetchChatData()
+                self.messages = messageResponse.messages
+                chatTable.reloadData()
+            } catch {
+                displayChatMessageFailure(error: error)
+            }
+        }
+    }
+}
+
+// MARK: - Alerts
+extension ChatViewController {
+    
+    /// Displays failure alert with server error response or generalized error
+    /// - Parameters:
+    ///   - error: thrown generalized alert
+    func displayChatMessageFailure(error: Error) {
+        let alert = UIAlertController(title: "Chat Failure",
+                                      message: error.localizedDescription,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
 }
