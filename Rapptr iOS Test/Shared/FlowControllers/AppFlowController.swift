@@ -45,20 +45,22 @@ extension AppFlowController {
     func navigateToChat() {
         let chatViewController = ChatViewController()
         chatViewController.edgesForExtendedLayout = []
-        chatViewController.appFlowControllerDelegate = self
+        navController.viewControllers.first?.navigationItem.backButtonTitle = ""
         navController.pushViewController(chatViewController, animated: true)
     }
     
     func navigateToLogin() {
         let loginViewController = LoginViewController()
         loginViewController.edgesForExtendedLayout = []
+        navController.viewControllers.first?.navigationItem.backButtonTitle = ""
         navController.pushViewController(loginViewController, animated: true)
     }
     
     func navigateToAnimation() {
-        let animationViewController = AnimationViewController()
-        animationViewController.edgesForExtendedLayout = []
-        navController.pushViewController(animationViewController, animated: true)
+        let animationHost = UIHostingController(rootView: AnimationView(viewModel: AnimationView.ViewModel(backBtnTapHandler: popCurrentVC)))
+        animationHost.edgesForExtendedLayout = []
+        navController.viewControllers.first?.navigationItem.backButtonTitle = ""
+        navController.pushViewController(animationHost, animated: true)
     }
 }
 

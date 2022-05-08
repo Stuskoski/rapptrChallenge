@@ -16,6 +16,9 @@
 		8B3A51692826283700952DF9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51682826283700952DF9 /* MenuView.swift */; };
 		8B3A516B28262F5A00952DF9 /* MenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A516A28262F5A00952DF9 /* MenuView+ViewModel.swift */; };
 		8B3A516E2826CEF000952DF9 /* RapptrTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A516D2826CEF000952DF9 /* RapptrTextField.swift */; };
+		8B3A51702827681B00952DF9 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A516F2827681B00952DF9 /* AnimationView.swift */; };
+		8B3A517228276AEF00952DF9 /* RapptrButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A517128276AEF00952DF9 /* RapptrButton.swift */; };
+		8B3A51762827715900952DF9 /* AnimationView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51752827715900952DF9 /* AnimationView+ViewModel.swift */; };
 		E9414DB726C45CF300512A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DB626C45CF300512A71 /* AppDelegate.swift */; };
 		E9414DC026C45CF400512A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9414DBF26C45CF400512A71 /* Assets.xcassets */; };
 		E9414DC326C45CF400512A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9414DC126C45CF400512A71 /* LaunchScreen.storyboard */; };
@@ -25,11 +28,9 @@
 		E9414DD626C4617B00512A71 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DD426C4617B00512A71 /* ChatTableViewCell.swift */; };
 		E9414DD726C4617B00512A71 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9414DD526C4617B00512A71 /* ChatTableViewCell.xib */; };
 		E9414DE126C4618900512A71 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DD926C4618900512A71 /* ChatViewController.swift */; };
-		E9414DE226C4618900512A71 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DDA26C4618900512A71 /* AnimationViewController.swift */; };
 		E9414DE326C4618900512A71 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9414DDB26C4618900512A71 /* ChatViewController.xib */; };
 		E9414DE526C4618900512A71 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9414DDD26C4618900512A71 /* LoginViewController.xib */; };
 		E9414DE626C4618900512A71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DDE26C4618900512A71 /* LoginViewController.swift */; };
-		E9414DE726C4618900512A71 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9414DDF26C4618900512A71 /* AnimationViewController.xib */; };
 		E9414DEA26C468D700512A71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9414DE926C468D700512A71 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,9 @@
 		8B3A51682826283700952DF9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		8B3A516A28262F5A00952DF9 /* MenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		8B3A516D2826CEF000952DF9 /* RapptrTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapptrTextField.swift; sourceTree = "<group>"; };
+		8B3A516F2827681B00952DF9 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		8B3A517128276AEF00952DF9 /* RapptrButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapptrButton.swift; sourceTree = "<group>"; };
+		8B3A51752827715900952DF9 /* AnimationView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimationView+ViewModel.swift"; sourceTree = "<group>"; };
 		E9414DB326C45CF300512A71 /* Rapptr iOS Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rapptr iOS Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9414DB626C45CF300512A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9414DBF26C45CF400512A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,11 +60,9 @@
 		E9414DD426C4617B00512A71 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		E9414DD526C4617B00512A71 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		E9414DD926C4618900512A71 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		E9414DDA26C4618900512A71 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		E9414DDB26C4618900512A71 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		E9414DDD26C4618900512A71 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E9414DDE26C4618900512A71 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E9414DDF26C4618900512A71 /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		E9414DE926C468D700512A71 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8B3A51662826157200952DF9 /* RapptrRoundedButton.swift */,
+				8B3A517128276AEF00952DF9 /* RapptrButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -144,6 +147,28 @@
 				8B3A516D2826CEF000952DF9 /* RapptrTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		8B3A5177282777CC00952DF9 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A51682826283700952DF9 /* MenuView.swift */,
+				8B3A516A28262F5A00952DF9 /* MenuView+ViewModel.swift */,
+				8B3A516F2827681B00952DF9 /* AnimationView.swift */,
+				8B3A51752827715900952DF9 /* AnimationView+ViewModel.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		8B3A5178282777DF00952DF9 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E9414DD926C4618900512A71 /* ChatViewController.swift */,
+				E9414DDB26C4618900512A71 /* ChatViewController.xib */,
+				E9414DDE26C4618900512A71 /* LoginViewController.swift */,
+				E9414DDD26C4618900512A71 /* LoginViewController.xib */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		E9414DAA26C45CF300512A71 = {
@@ -218,14 +243,8 @@
 		E9414DD826C4618900512A71 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8B3A51682826283700952DF9 /* MenuView.swift */,
-				8B3A516A28262F5A00952DF9 /* MenuView+ViewModel.swift */,
-				E9414DDA26C4618900512A71 /* AnimationViewController.swift */,
-				E9414DDF26C4618900512A71 /* AnimationViewController.xib */,
-				E9414DD926C4618900512A71 /* ChatViewController.swift */,
-				E9414DDB26C4618900512A71 /* ChatViewController.xib */,
-				E9414DDE26C4618900512A71 /* LoginViewController.swift */,
-				E9414DDD26C4618900512A71 /* LoginViewController.xib */,
+				8B3A5178282777DF00952DF9 /* UIKit */,
+				8B3A5177282777CC00952DF9 /* SwiftUI */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -299,7 +318,6 @@
 			files = (
 				E9414DC326C45CF400512A71 /* LaunchScreen.storyboard in Resources */,
 				E9414DD726C4617B00512A71 /* ChatTableViewCell.xib in Resources */,
-				E9414DE726C4618900512A71 /* AnimationViewController.xib in Resources */,
 				E9414DC026C45CF400512A71 /* Assets.xcassets in Resources */,
 				E9414DE326C4618900512A71 /* ChatViewController.xib in Resources */,
 				E9414DE526C4618900512A71 /* LoginViewController.xib in Resources */,
@@ -357,19 +375,21 @@
 			files = (
 				E9414DD126C460A600512A71 /* ChatClient.swift in Sources */,
 				8B3A515E2825CEF900952DF9 /* UIViewController+Extension.swift in Sources */,
+				8B3A51762827715900952DF9 /* AnimationView+ViewModel.swift in Sources */,
 				E9414DE126C4618900512A71 /* ChatViewController.swift in Sources */,
 				E9414DCE26C45F9200512A71 /* LoginClient.swift in Sources */,
 				8B3A515C2825CEA000952DF9 /* AppFlowController.swift in Sources */,
 				E9414DCB26C45EC900512A71 /* Message.swift in Sources */,
 				8B3A51612825D1E500952DF9 /* ThemeHelper.swift in Sources */,
 				8B3A516E2826CEF000952DF9 /* RapptrTextField.swift in Sources */,
+				8B3A517228276AEF00952DF9 /* RapptrButton.swift in Sources */,
 				E9414DEA26C468D700512A71 /* SceneDelegate.swift in Sources */,
 				8B3A51692826283700952DF9 /* MenuView.swift in Sources */,
 				E9414DD626C4617B00512A71 /* ChatTableViewCell.swift in Sources */,
 				8B3A516B28262F5A00952DF9 /* MenuView+ViewModel.swift in Sources */,
 				8B3A51672826157200952DF9 /* RapptrRoundedButton.swift in Sources */,
-				E9414DE226C4618900512A71 /* AnimationViewController.swift in Sources */,
 				E9414DB726C45CF300512A71 /* AppDelegate.swift in Sources */,
+				8B3A51702827681B00952DF9 /* AnimationView.swift in Sources */,
 				8B3A51592825CB8F00952DF9 /* Color+Extension.swift in Sources */,
 				E9414DE626C4618900512A71 /* LoginViewController.swift in Sources */,
 			);

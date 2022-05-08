@@ -24,34 +24,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - Properties
     private var client: ChatClient?
     private var messages: [Message]? = Message.testData()
-    
-    var appFlowControllerDelegate: AppFlowControllerDelegate?
-    
+        
     // MARK: - Outlets
     @IBOutlet weak var chatTable: UITableView!
-    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Chat"
         
-        configureNavBar()
         configureTable(tableView: chatTable)
-    }
-    
-    // MARK: - IBAction
-    @IBAction func backAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    func configureNavBar() {
-        let backBtn = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(dismissView))
-        self.navigationItem.leftBarButtonItem = backBtn
-    }
-    
-    @objc func dismissView() {
-        appFlowControllerDelegate?.popCurrentVC()
     }
 }
 

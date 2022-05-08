@@ -36,23 +36,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Login"
-        configureNavBar()
         hideKeyboardWhenTappedAround()
-    }
-    
-    func configureNavBar() {
-        let backBtn = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(dismissView))
-        self.navigationItem.leftBarButtonItem = backBtn
     }
     
     // MARK: - Actions
     @IBAction func didPressLoginButton(_ sender: Any) {
         validateTextFields()
-    }
-    
-    @objc func dismissView() {
-        //can either use flow controller or just parent reference to nav controller
-        self.navigationController?.popViewController(animated: true)
     }
 }
 

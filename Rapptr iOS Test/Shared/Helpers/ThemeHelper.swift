@@ -24,6 +24,8 @@ class ThemeHelper {
             navbarAppearance.backgroundColor = .RapptrColors.rapptrBlue
             navbarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .semibold)]
+
+            UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000.0, vertical: 0.0), for: .default)
             
             UINavigationBar.appearance().standardAppearance = navbarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBar.appearance().standardAppearance
