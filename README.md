@@ -1,13 +1,10 @@
 Hello!
 
-Your task is to use the provided project to create the iOS app displayed in the provided PDF.
+Here is my code challenge submission.
 
-You will find more detailed instructions as comments inside of the project.
+You can run tests for the project by running the command `cmd+u` in Xcode or by navigating to `Rapptr_iOS_TestUITests` and clicking
+the play button next to the class.
 
-All required design assets are already inside of the provided project.
+This project uses a mix of SwiftUI, UIKit as well as cocoapods(pods in GIT repo) for a image loading library.
 
-Bonus Points:
-- Show you can create UI and Auto Layout programmatically as well as through Storyboard/Interface Builder
-- Show us you can add Cocoapods to this project. We will allow the use of one single pod.
-
-Good luck!
+Thanks for looking!
