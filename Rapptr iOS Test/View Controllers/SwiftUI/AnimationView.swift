@@ -32,6 +32,7 @@ struct AnimationView: View {
                 .position(viewModel.location)
                 .gesture(viewModel.simpleDrag)
                 .opacity(viewModel.imageOpacity)
+                .accessibilityIdentifier(viewModel.imageOpacity == 0 ? "hidden_logo" : "visible_logo")
 
             Spacer()
             RapptrButton(buttonTitle: viewModel.fadeInOut.rawValue,
