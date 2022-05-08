@@ -19,7 +19,7 @@
 		8B3A51702827681B00952DF9 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A516F2827681B00952DF9 /* AnimationView.swift */; };
 		8B3A517228276AEF00952DF9 /* RapptrButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A517128276AEF00952DF9 /* RapptrButton.swift */; };
 		8B3A51762827715900952DF9 /* AnimationView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A51752827715900952DF9 /* AnimationView+ViewModel.swift */; };
-		8B3A517B28282E1000952DF9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A517A28282E1000952DF9 /* LoginService.swift */; };
+		8B3A517B28282E1000952DF9 /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A517A28282E1000952DF9 /* LoginClient.swift */; };
 		8B3A518028285C0D00952DF9 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A517F28285C0D00952DF9 /* LoginResponse.swift */; };
 		8B3A518428285C4600952DF9 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A518328285C4600952DF9 /* NetworkErrors.swift */; };
 		8B3A518E28287ACB00952DF9 /* Rapptr_iOS_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A518D28287ACB00952DF9 /* Rapptr_iOS_TestUITests.swift */; };
@@ -62,7 +62,7 @@
 		8B3A516F2827681B00952DF9 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		8B3A517128276AEF00952DF9 /* RapptrButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapptrButton.swift; sourceTree = "<group>"; };
 		8B3A51752827715900952DF9 /* AnimationView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimationView+ViewModel.swift"; sourceTree = "<group>"; };
-		8B3A517A28282E1000952DF9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		8B3A517A28282E1000952DF9 /* LoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
 		8B3A517F28285C0D00952DF9 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		8B3A518328285C4600952DF9 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		8B3A518B28287ACB00952DF9 /* Rapptr iOS TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rapptr iOS TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,7 +201,7 @@
 		8B3A517928282DEA00952DF9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8B3A517A28282E1000952DF9 /* LoginService.swift */,
+				8B3A517A28282E1000952DF9 /* LoginClient.swift */,
 				E9414DD026C460A600512A71 /* ChatClient.swift */,
 			);
 			path = Services;
@@ -477,7 +477,7 @@
 				E9414DE126C4618900512A71 /* ChatViewController.swift in Sources */,
 				8B3A515C2825CEA000952DF9 /* AppFlowController.swift in Sources */,
 				E9414DCB26C45EC900512A71 /* Message.swift in Sources */,
-				8B3A517B28282E1000952DF9 /* LoginService.swift in Sources */,
+				8B3A517B28282E1000952DF9 /* LoginClient.swift in Sources */,
 				8B3A51612825D1E500952DF9 /* ThemeHelper.swift in Sources */,
 				8B3A516E2826CEF000952DF9 /* RapptrTextField.swift in Sources */,
 				8B3A517228276AEF00952DF9 /* RapptrButton.swift in Sources */,

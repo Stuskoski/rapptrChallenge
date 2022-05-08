@@ -24,9 +24,9 @@ import Foundation
  *
 */
 
-class LoginService {
+class LoginClient {
     
-    static let shareInstance = LoginService()
+    static let shareInstance = LoginClient()
     
     private init() { }
     

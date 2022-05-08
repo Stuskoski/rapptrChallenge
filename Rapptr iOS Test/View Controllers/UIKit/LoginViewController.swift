@@ -91,7 +91,7 @@ extension LoginViewController {
             let startTime = Date()
 
             do {
-                let successResponse = try await LoginService.shareInstance.login(email: email, password: password)
+                let successResponse = try await LoginClient.shareInstance.login(email: email, password: password)
                 displayLoginSuccess(successResponse: successResponse, executionTime: Date().timeIntervalSince(startTime))
             } catch NetworkError.loginError(let failureResponse) {
                 displayLoginFailure(failureResponse: failureResponse)
