@@ -241,11 +241,11 @@
 		E9414DB526C45CF300512A71 /* Rapptr iOS Test */ = {
 			isa = PBXGroup;
 			children = (
-				8B3A51562825CB7F00952DF9 /* Shared */,
 				E9414DB626C45CF300512A71 /* AppDelegate.swift */,
 				E9414DE926C468D700512A71 /* SceneDelegate.swift */,
 				E9414DD226C4617B00512A71 /* Views */,
 				E9414DD826C4618900512A71 /* View Controllers */,
+				8B3A51562825CB7F00952DF9 /* Shared */,
 				E9414DBF26C45CF400512A71 /* Assets.xcassets */,
 				E9414DC126C45CF400512A71 /* LaunchScreen.storyboard */,
 				E9414DC426C45CF400512A71 /* Info.plist */,
