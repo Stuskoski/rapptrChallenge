@@ -26,11 +26,10 @@ class LoginViewController: UIViewController {
      *
      * 7) When login is successful, tapping 'OK' in the UIAlertController should bring you back to the main menu.
      **/
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: - Properties
-    private var client: LoginClient?
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -76,14 +75,61 @@ extension LoginViewController: UITextFieldDelegate {
         
         attemptLogin(email: email, password: password)
     }
-    
-    func attemptLogin(email: String, password: String) {
-        let startTime = Date()
+}
 
-        print("logging in...")
+// MARK: - Service Calls
+extension LoginViewController {
+    
+    /// Attempts to login and then will either display a success or
+    /// failure alert depending on server response
+    /// - Parameters:
+    ///   - email: email string
+    ///   - password: password string
+    func attemptLogin(email: String, password: String) {
         
-        let executionTime = Date().timeIntervalSince(startTime)
-        
-        print("call took \(executionTime)")
+        Task(priority: .userInitiated) {
+            let startTime = Date()
+
+            do {
+                let successResponse = try await LoginService.shareInstance.login(email: email, password: password)
+                displayLoginSuccess(successResponse: successResponse, executionTime: Date().timeIntervalSince(startTime))
+            } catch NetworkError.loginError(let failureResponse) {
+                displayLoginFailure(failureResponse: failureResponse)
+            } catch {
+                displayLoginFailure(error: error)
+            }
+        }
+    }
+}
+
+// MARK: - Alerts
+extension LoginViewController {
+    
+    /// Displays success alert with response information
+    /// pops view on action click
+    /// - Parameters:
+    ///   - successResponse: response from login service
+    ///   - executionTime: time interval for how long response took
+    func displayLoginSuccess(successResponse: LoginResponse, executionTime: TimeInterval) {
+        let alert = UIAlertController(title: "Login Success",
+                                      message: successResponse.message + "\nRequest took: \(Int((executionTime.truncatingRemainder(dividingBy: 1)) * 1000)) ms",
+                                      preferredStyle: .alert)
+        let dismissOk = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(dismissOk)
+        present(alert, animated: true)
+    }
+    
+    /// Displays failure alert with server error response or generalized error
+    /// - Parameters:
+    ///   - failureResponse: optional error response from login service
+    ///   - error: optional generalized alert
+    func displayLoginFailure(failureResponse: LoginResponse? = nil, error: Error? = nil) {
+        let alert = UIAlertController(title: "Login Failure",
+                                      message: failureResponse?.message ?? error?.localizedDescription,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
 }

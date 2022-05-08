@@ -33,6 +33,10 @@ class AppFlowController: UIViewController, AppFlowControllerDelegate {
         navController.show(menuHost, sender: self)
         addChildVC(navController)
     }
+    
+    func hideBackButtonTitle() {
+        navController.visibleViewController?.navigationItem.backButtonTitle = ""
+    }
 }
 
 // MARK: - Navigation
@@ -45,21 +49,21 @@ extension AppFlowController {
     func navigateToChat() {
         let chatViewController = ChatViewController()
         chatViewController.edgesForExtendedLayout = []
-        navController.viewControllers.first?.navigationItem.backButtonTitle = ""
+        hideBackButtonTitle()
         navController.pushViewController(chatViewController, animated: true)
     }
     
     func navigateToLogin() {
         let loginViewController = LoginViewController()
         loginViewController.edgesForExtendedLayout = []
-        navController.viewControllers.first?.navigationItem.backButtonTitle = ""
+        hideBackButtonTitle()
         navController.pushViewController(loginViewController, animated: true)
     }
     
     func navigateToAnimation() {
         let animationHost = UIHostingController(rootView: AnimationView(viewModel: AnimationView.ViewModel(backBtnTapHandler: popCurrentVC)))
         animationHost.edgesForExtendedLayout = []
-        navController.viewControllers.first?.navigationItem.backButtonTitle = ""
+        hideBackButtonTitle()
         navController.pushViewController(animationHost, animated: true)
     }
 }
